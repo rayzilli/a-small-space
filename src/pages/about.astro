@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+const pageTitle = "About";
+
+---
+
+<Layout title = {pageTitle}>
+    <main>
+      <Navigation />
+
+        <h1>{pageTitle}</h1>
+        <p>
+            My name is {identity.firstName} from {identity.country}. I live on the first floor and work as a {identity.occupation}.
+        </p>
+        <p>
+            My hobbies include: {skills.map((skills) => <li class="bg-blue-400"> {skills} </li>)}
+        </p>
+        {happy && <p>I am happy to learn</p>}
+        {finished && <p>I finished this tutorial!</p>}
+        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+    </main>
+    
+</Layout>
