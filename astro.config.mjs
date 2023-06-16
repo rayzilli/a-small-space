@@ -5,6 +5,5 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rayzilli.github.io',
-  base: '/a-small-space',
   integrations: [tailwind(), mdx()],
 });
